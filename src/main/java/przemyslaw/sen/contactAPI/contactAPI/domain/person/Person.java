@@ -1,5 +1,6 @@
 package przemyslaw.sen.contactAPI.contactAPI.domain.person;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +10,7 @@ import java.util.Date;
 @Entity
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 public class Person {
 
     @Id

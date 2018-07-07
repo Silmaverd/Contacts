@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AllDomainData>
+    <Person>
+        <id>1</id>
+        <name>Jan Kowalski</name>
+        <birthDate>1961-01-01T00:12:00+01:00</birthDate>
+        <gender>MALE</gender>
+        <pesel>12345678900</pesel>
+    </Person>
+    <Person>
+        <id>2</id>
+        <name>Jan Nowak</name>
+        <birthDate>1999-01-04T00:05:00+01:00</birthDate>
+        <gender>MALE</gender>
+        <pesel>12401234566</pesel>
+    </Person>
+    <Person>
+        <id>3</id>
+        <name>Magda Wojcik</name>
+        <birthDate>1962-08-12T00:05:00+01:00</birthDate>
+        <gender>FEMALE</gender>
+        <pesel>12412234566</pesel>
+    </Person>
+    <Person>
+        <id>4</id>
+        <name>Bogdan Malik</name>
+        <birthDate>2001-03-09T00:05:00+01:00</birthDate>
+        <gender>MALE</gender>
+        <pesel>12401236066</pesel>
+    </Person>
+    <Person>
+        <id>5</id>
+        <name>Karolika Wojtas</name>
+        <birthDate>1995-02-10T00:05:00+01:00</birthDate>
+        <gender>FEMALE</gender>
+        <pesel>12498734566</pesel>
+    </Person>
+    <Email>
+        <id>6</id>
+        <ownerId>1</ownerId>
+        <emailAddress>jan.kowalski@gmail.com</emailAddress>
+    </Email>
+    <Email>
+        <id>7</id>
+        <ownerId>1</ownerId>
+        <emailAddress>jan.kowalski@tlen.com</emailAddress>
+    </Email>
+    <Email>
+        <id>8</id>
+        <ownerId>3</ownerId>
+        <emailAddress>magda.wojcik@gmail.com</emailAddress>
+    </Email>
+    <Email>
+        <id>9</id>
+        <ownerId>4</ownerId>
+        <emailAddress>bogdan.m@tlen.pl</emailAddress>
+    </Email>
+    <Phone>
+        <id>10</id>
+        <ownerId>1</ownerId>
+        <phoneNumber>0987654</phoneNumber>
+    </Phone>
+    <Phone>
+        <id>11</id>
+        <ownerId>2</ownerId>
+        <phoneNumber>0987123</phoneNumber>
+    </Phone>
+    <Phone>
+        <id>12</id>
+        <ownerId>2</ownerId>
+        <phoneNumber>091234124</phoneNumber>
+    </Phone>
+    <Phone>
+        <id>13</id>
+        <ownerId>5</ownerId>
+        <phoneNumber>012987654</phoneNumber>
+    </Phone>
+</AllDomainData>

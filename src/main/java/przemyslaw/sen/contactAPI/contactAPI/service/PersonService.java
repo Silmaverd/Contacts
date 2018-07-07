@@ -36,6 +36,11 @@ public class PersonService {
         personRepository.save(person);
     }
 
+    //TODO: ensure only correct data is beeing saved
+    public void addPerson(Person person) {
+        personRepository.save(person);
+    }
+
     public List<Person> getPerson(String name) {
         return personRepository.findByName(name);
     }

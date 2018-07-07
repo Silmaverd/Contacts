@@ -1,5 +1,6 @@
 package przemyslaw.sen.contactAPI.contactAPI.domain.contact.phone;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -8,6 +9,7 @@ import javax.persistence.*;
 @Getter
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 public class PhoneNumber {
 
     @Id

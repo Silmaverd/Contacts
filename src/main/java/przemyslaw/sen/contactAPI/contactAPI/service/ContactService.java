@@ -40,6 +40,16 @@ public class ContactService {
             phoneNumberRepository.save(new PhoneNumber(phoneNumber, personId));
     }
 
+    //TODO: ensure only correct data is beeing saved
+    public void addEmail(EmailAddress emailAddress) {
+        emailRepository.save(emailAddress);
+    }
+
+    //TODO: ensure only correct data is beeing saved
+    public void addPhoneNumber(PhoneNumber phoneNumber) {
+        phoneNumberRepository.save(phoneNumber);
+    }
+
     public List<EmailAddress> getEmailsForPerson(Long personId) {
         return emailRepository.findAllByOwnerId(personId);
     }

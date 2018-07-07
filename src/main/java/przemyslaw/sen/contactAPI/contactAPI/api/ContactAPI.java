@@ -2,14 +2,12 @@ package przemyslaw.sen.contactAPI.contactAPI.api;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import przemyslaw.sen.contactAPI.contactAPI.service.ContactService;
-import przemyslaw.sen.contactAPI.contactAPI.service.PersonService;
 import przemyslaw.sen.contactAPI.contactAPI.view.EmailView;
 import przemyslaw.sen.contactAPI.contactAPI.view.PhoneNumberView;
 import przemyslaw.sen.contactAPI.contactAPI.view.Response;

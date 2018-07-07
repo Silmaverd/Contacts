@@ -46,4 +46,15 @@ public class PersonService {
         else
             throw new IllegalArgumentException("Person with id " + id + " does not exist");
     }
+
+    public List<Person> getPersonsWithBirthDateBetween(String startDate, String endDate) throws ParseException {
+        return personRepository.findByBirthDateBetween(
+                dateFormatter.parse(startDate),
+                dateFormatter.parse(endDate)
+        );
+    }
+
+    public List<Person> getPersonWithEmailsMatchingPattern(String pattern) {
+        return personRepository.findAllHavingEmailAddressMatching(pattern);
+    }
 }

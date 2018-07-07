@@ -1,11 +1,13 @@
 package przemyslaw.sen.contactAPI.contactAPI.domain.contact.phone;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Getter
 @Entity
+@NoArgsConstructor
 public class PhoneNumber {
 
     @Id

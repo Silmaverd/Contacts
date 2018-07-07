@@ -1,9 +1,12 @@
 package przemyslaw.sen.contactAPI.contactAPI.domain.person;
 
 import lombok.NoArgsConstructor;
+import przemyslaw.sen.contactAPI.contactAPI.domain.person.date.BirthDateValidator;
+import przemyslaw.sen.contactAPI.contactAPI.domain.person.date.InvalidDateException;
 import przemyslaw.sen.contactAPI.contactAPI.domain.person.pesel.InvalidPeselException;
 import przemyslaw.sen.contactAPI.contactAPI.domain.person.pesel.PeselValidator;
 
+import java.text.ParseException;
 import java.util.Date;
 
 @NoArgsConstructor
@@ -28,16 +31,19 @@ public final class PersonBuilder {
         return this;
     }
 
-    public PersonBuilder withBirthDate(Date date) {
-        this.birthDate = date;
+    public PersonBuilder withBirthDate(Date date) throws ParseException, InvalidDateException {
+        if (BirthDateValidator.validate(date))
+            this.birthDate = date;
+        else
+            throw new InvalidDateException(date + " is not a valid date");
         return this;
     }
 
     public PersonBuilder withPesel(String pesel) throws InvalidPeselException {
-        if (!PeselValidator.isValid(pesel))
-            throw new InvalidPeselException(pesel + " is not a valid pesel number");
-        else
+        if (PeselValidator.validate(pesel))
             this.peselNumber = pesel;
+        else
+            throw new InvalidPeselException(pesel + " is not a valid pesel number");
         return this;
     }
 

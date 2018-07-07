@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import przemyslaw.sen.contactAPI.contactAPI.domain.person.Gender;
 import przemyslaw.sen.contactAPI.contactAPI.domain.person.PersonBuilder;
+import przemyslaw.sen.contactAPI.contactAPI.domain.person.date.InvalidDateException;
 import przemyslaw.sen.contactAPI.contactAPI.domain.person.pesel.InvalidPeselException;
 import przemyslaw.sen.contactAPI.contactAPI.repository.PersonRepository;
 import przemyslaw.sen.contactAPI.contactAPI.domain.person.Person;
@@ -22,7 +23,7 @@ public class PersonService {
     private final SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");
 
     public void addPerson(String name, String birthDate, String gender, String peselNumber)
-            throws ParseException, InvalidPeselException {
+            throws ParseException, InvalidPeselException, InvalidDateException {
         PersonBuilder personBuilder = new PersonBuilder();
         Person person = personBuilder
                 .aPerson()
